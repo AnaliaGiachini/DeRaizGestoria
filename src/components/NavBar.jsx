@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 
-//Falta alinear los items en las pantallas pequeñas ver el hover y poner la x arriba de los items.
-
 const Navbar = () => {
   // Estado local para controlar si el menú de navegación está abierto o cerrado en dispositivos móviles
   // Local state for controller if the navegation menu is open or close in the movil.
@@ -14,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-rose-50 p-4 fixed w-full z-10">
+    <nav className="bg-rose-100 p-4 fixed w-full z-10">
       <div className="container mx-auto flex justify-center">
         <div className="flex md:hidden" style={{ marginLeft: 'auto' }}>
           <button
@@ -48,7 +46,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className={`md:flex md:items-center md:w-auto ${isOpen ? 'block' : 'hidden'}`}>
-          <ul className="md:flex space-x-4 'flex-col items-start'">
+          <ul className="md:flex space-x-4 text-right">
             <li>
               <Link
                 to="Home"
@@ -75,7 +73,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="Contact" smooth={true} duration={500}
+                to="Customers" smooth={true} duration={500}
                 className="text-secondary font-serif hover:text-gray-500 text-slate-400"
               >
                 <strong>Clientes</strong>
